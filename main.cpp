@@ -1,23 +1,36 @@
 #include <iostream>
-
-// Lab 5 — Your Name
+#include <string>
+// Lab 5 — Hussain Zahidi
 // CIS 5 Week 05 · Eligibility check
 
 int main() {
-  int age = 0;
-  double gpa = 0.0;
+	using std::cout;
+	using std::cin;
+	using std::string;
 
-  // TODO: cout question, then cin, for age and for gpa
+	int age = 0;
+	double gpa = 0.0;
 
-  // Thresholds: adult at 18, honors at 3.5 (change these and say why in a comment)
-  // TODO: bool adult = ...;
-  // TODO: bool honors = ...;
+	cout << "How old are you? ";
+	cin >> age;
 
-  // TODO: if (adult && honors) { ... }        best case first
-  // TODO: else if (adult || honors) { ... }   exactly one requirement met
-  // TODO: else { ... }                        neither — the program still answers
+	cout << '\n' << "And your gpa? ";
+	cin >> gpa;
+	cout << '\n';
 
-  // Edge values to run: 17 / 18 with a 3.8, and 3.4 / 3.5 with age 20
+	bool adult = age >= 18;
+	bool smart = gpa >= 3.8;
 
-  return 0;
+	if (adult && smart) {
+		cout << "You're going to do just fine!";
+
+	}
+	else if (adult || smart) {
+		cout << "Good luck with your future goals!";
+
+	}
+	else {
+		cout << "What are your future plans?";
+	}
+	return 0;
 }
